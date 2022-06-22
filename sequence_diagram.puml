@@ -1,0 +1,36 @@
+@startuml sequence_diagram
+
+
+
+actor User as u #Red/Yellow
+
+participant "Frontend(Angular/React)" as FE
+
+participant "Backend(Java/Spring Boot)" as BE
+
+database "DataBase(Mysql)" as DB #Gainsboro
+
+participant "Cirro Platform" as CP #Aquamarine
+
+
+
+
+u -> FE: <color:Blue> Send Request to get a SPA
+
+FE-> BE:Request Rest API call
+
+BE -> BE:Internal computation
+
+BE -> DB:storage specific space data
+
+DB --> BE:recover specific space data
+
+BE -> CP:Request API call
+
+CP --> BE:Response API
+
+BE --> FE:Rest API response
+
+FE --> u: <color:Blue> Response
+
+@enduml
