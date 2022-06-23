@@ -44,11 +44,14 @@ java -jar  -Dprofile=dev  example-cirro-service-0.0.1-SNAPSHOT.jar
 
 java -jar  -Dprofile=prod  example-cirro-service-0.0.1-SNAPSHOT.jar
 ```
-Below is provided an utility to get the TOKEN to access manually the Cirro Platform with some client :
+Below is provided an utility to generate access TOKEN to  manually interrogate the Cirro Platform with some client :
 
 ```bash
 print_token_cirro.bat
 ```
 
+### Basic Architecture
+
+![sequence diagram](./sequence_diagram.png)
 
 
