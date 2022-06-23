@@ -55,3 +55,25 @@ print_token_cirro.bat
 ![sequence diagram](./sequence_diagram.png)
 
 
+
+
+### DB and User creation scipts:
+
+```sql
+CREATE DATABASE DB_NAME;
+
+USE DB_NAME;
+
+CREATE USER 'USER_NAME'@'localhost' IDENTIFIED BY 'PASSWORD';
+
+CREATE USER 'USER_NAME'@'%' IDENTIFIED BY 'PASSWORD';
+
+GRANT ALL PRIVILEGES ON DB_NAME.* TO  'USER_NAME'@'localhost';
+
+GRANT ALL PRIVILEGES ON DB_NAME.* TO  'USER_NAME'@'%';
+
+FLUSH PRIVILEGES;
+
+```
+
+
