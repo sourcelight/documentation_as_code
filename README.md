@@ -1,6 +1,6 @@
 # example-cirro-java-app
 
-
+## Overview
 
 The application itself is designed to support HTTPS, despite this, it is configurable and you can change the protocol to simple HTTP and the port number.
 
@@ -16,6 +16,13 @@ Lastly, the third module(example-cirro-service) manages and expose the API used 
 <br>
 <br>
 ![sequence diagram](./cirroClientFeign.png)
+
+
+### Basic Architecture
+
+Below, a brief description of how the application interacts with the different systems
+
+![sequence diagram](./sequence_diagram.png)
 
 
 ### Requirements
@@ -64,12 +71,6 @@ Below is provided an utility to generate access TOKEN to  manually interrogate t
 ```bash
 print_token_cirro.bat
 ```
-
-### Basic Architecture
-
-![sequence diagram](./sequence_diagram.png)
-
-
 
 
 
