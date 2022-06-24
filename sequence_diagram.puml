@@ -1,20 +1,26 @@
 @startuml sequence_diagram
 
 ' Define the background color
-skinparam backgroundColor #EBF72B
+'skinparam backgroundColor #EBF72B
+
+skinparam backgroundColor #LightGoldenRodYellow
 
 actor User as u #Red/Yellow
 
+'actor User as u #Red/LightGreen
+
 participant "Frontend(Angular/React)" as FE
 
-box #LightCyan
+box #LightSeaGreen
+'box #LightGreen
 
 participant "Backend(Java/Spring Boot)" as BE
 
 database "DataBase(Mysql)" as DB #Gainsboro
 end box
 
-participant "Cirro Platform" as CP #Aquamarine
+participant "Cirro Platform" as CP #MediumAquaMarine
+'participant "Cirro Platform" as CP #AAFAC9
 
 
 
