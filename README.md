@@ -89,7 +89,7 @@ The default path (it's configurable by maven pom) where to place the configurati
 
 The system needs the following files((We report the case of a development environment but the extensions  can obviously be staging or prod)):
 
-- application-dev.yml # here we have the specific application configuratios as: protocol, port number, authentication parmeters(OAUTH2), datasource, Cirro platform addresses(staging/production)
+- application-dev.yml # here we have the specific application configurations as: protocol, port number, authentication parmeters(OAUTH2), datasource, Cirro platform addresses(staging/production)
 
 - logback-dev.xml # To configure logging process output
 
