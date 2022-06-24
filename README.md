@@ -57,6 +57,72 @@ print_token_cirro.bat
 
 
 
+
+### Configurations
+
+The project is configured to work in 3 different environments:
+
+- production
+- staging
+- development
+
+The default path (it's configurable by maven pom) where to place the configuration files is for each configuration:
+```
+/opt/cirro/config/applications/cirro-java
+```
+
+The system needs the following files((We report the case of a development environment but the extensions  can obviously be staging or prod)):
+
+- application-dev.yml # here we have the specific application configuratios as: protocol, port number,authentication parmeters(OAUTH2),datasource,address cirro platform(staging/production)
+
+- logback-dev.xml # To configure logging process output
+
+- cirro_private_key.pem # the private key to interact with the Cirro Platform
+- ssl-server.jks # the private key to provide https for the application itself
+
+
+### OAUTH2 Integration with Cirro Platform
+
+Below are indicated some deatails about the necessary parameters to perform the OAUTH2 with the Cirro Platform:
+
+<pre>
+#cirro oauth2 
+spring:
+  security:
+    oauth2:
+      client:
+        registration:          
+          cirro:
+            client-name: cirro
+            client-id: CLIENT_ID_CIRRO
+            client-secret: CLIENT_SECRET_CIRRO
+            authorization-grant-type: authorization_code
+            redirect-uri:  ${server.domainProtocol}:${server.port}/login/oauth2/code/cirro
+            provider: cirro
+        provider:
+          cirro:
+            token-uri: https://staging.cirro.io/oauth/token
+            authorization-uri: https://staging.cirro.io/oauth/authorize           
+            userInfoUri: https://api.staging.cirro.io/v1/oauth/me
+            user-name-attribute: id 
+</pre>
+and the interaction with cirro API:
+
+<pre>
+#for a specific APP registerd on cirro community
+token-app-config:
+  client-id: CLIENT_ID_CIRRO
+</pre>
+
+
+
+
+
+
+<br>
+<br>
+<br>
+
 ### DB and User creation scipts:
 
 ```sql
@@ -75,5 +141,3 @@ GRANT ALL PRIVILEGES ON DB_NAME.* TO  'USER_NAME'@'%';
 FLUSH PRIVILEGES;
 
 ```
-
-
