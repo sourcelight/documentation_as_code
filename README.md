@@ -1,6 +1,21 @@
 # example-cirro-java-app
 
-The application itself is designed to support https, despite of this it is configurable and you can change in the configuration files the port number and the protocol communication.
+
+
+The application itself is designed to support HTTPS, despite this, it is configurable and you can change the protocol to simple HTTP and the port number.
+
+The core java application is build up with 3 submodules:
+
+- example-cirro-common
+- example-cirro-be
+- example -cirro-service
+
+The first module(example-cirro-common) contains all the common objects and utility methods to communicte with the FE applications and with the Cirro Platform.<br>
+The second module(example-cirro-be) is devolved to manage the storage and retrieve of specific apllication's data as some user information,translation assignment, translation files and translation results.<br>
+Lastly, the third module(example-cirro-service) manages and expose the API used by the FE(Angular/React)applications, it's a kind of controller, interacting with the external systems(Cirro Platform), DB and FE SPA applications. All interactions with Cirro Platform are well specified inside an inerface called `CirroClientFeign`. I carry an example excerpt below:
+<br>
+<br>
+![sequence diagram](./cirroClientFeign.png)
 
 
 ### Requirements
