@@ -13,7 +13,7 @@ The 2 active droplets on Digital Ocean(DO)are:
 
 ## Running/stopping/configuring applications
 
-Digits from the user home directory **riccardo** the following command and update previously the jar file named **example-cirro-service-0.0.1-SNAPSHOT.jar** containing the whole deployable project:
+Digits from the user home directory **riccardo** the following commands and update previously the jar file named **example-cirro-service-0.0.1-SNAPSHOT.jar** containing the whole deployable project:
 
 * to start the application: <pre> systemctl start springboot</pre>
 * to stop the application: <pre> systemctl start springboot</pre>
