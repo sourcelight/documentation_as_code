@@ -23,8 +23,10 @@ Each time you modify application's configuration it's necesary to stop and start
 <pre>/opt/cirro/config/applications/cirro-java/</pre>
 
 The specific path configuration is itself configurable modifying the pom.xml of "**example-cirro-service**" project for different deploy environments, below is reported a snippet:<br>
-```<properties>
-  <CIRRO_JAVA_CONFIGURATION>/opt/cirro/config/applications/cirro-java</CIRRO_JAVA_CONFIGURATION>
+
+```
+<properties>
+fix<CIRRO_JAVA_CONFIGURATION>/opt/cirro/config/applications/cirro-java</CIRRO_JAVA_CONFIGURATION>
 </properties>
 ```
 
