@@ -26,7 +26,7 @@ The specific path configuration is itself configurable modifying the pom.xml of 
 
 ```
 <properties>
-fix<CIRRO_JAVA_CONFIGURATION>/opt/cirro/config/applications/cirro-java</CIRRO_JAVA_CONFIGURATION>
+<CIRRO_JAVA_CONFIGURATION>/opt/cirro/config/applications/cirro-java</CIRRO_JAVA_CONFIGURATION>
 </properties>
 ```
 
