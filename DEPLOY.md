@@ -13,7 +13,8 @@ The 2 active droplets on Digital Ocean(DO)are:
 
 ## Running/stopping/configuring applications
 
-Digits from the user home directory **riccardo** the following commands and update previously the jar file named **example-cirro-service-0.0.1-SNAPSHOT.jar** containing the whole deployable project:
+ First update the jar file named **example-cirro-service-0.0.1-SNAPSHOT.jar** containing the whole deployable project inside the home directory **riccardo**
+and then digit from the same path the following commands:
 
 * to start the application: <pre> systemctl start springboot</pre>
 * to stop the application: <pre> systemctl start springboot</pre>
@@ -51,5 +52,5 @@ Pwd Admin : GWCxTbBYbjKqLLW3
 ## External Access
 To access the database instance and the console from a local machine you need to 
 * use a VPN as WireGuard  
-* modify the firewall rules on the DO droplets. At the moment the acess is designed in ssh with the private key on the local machine.
+* modify the firewall rules on the DO droplets. At the moment the access is designed in ssh with the private key on the local machine.
 
