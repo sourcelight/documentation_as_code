@@ -44,9 +44,9 @@ Respectively on 2 different schemas:
 * **db_angular** for the Java-Angular application
 * **db_react** for the Java-React application
 
-User Admin: doadmin
+User Admin: xxxxxx
 
-Pwd Admin : GWCxTbBYbjKqLLW3
+Pwd Admin : yyyyyy
 
 
 ## External Access
