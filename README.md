@@ -157,3 +157,36 @@ GRANT ALL PRIVILEGES ON DB_NAME.* TO  'USER_NAME'@'%';
 FLUSH PRIVILEGES;
 
 ```
+
+### Additional considerations
+
+In the branch: "Assignment-item-files-status-description"
+we introduced at the Administrator level UI the file's information for each translation assignment so that the Administrator could have been more informed about the file's status:
+- Ready to pick
+- In progress
+- Waiting for Review
+- Reviewed
+
+We thought about extending the same information 
+to the Translator Interface UI
+and it turned out the following reasoning:
+
+
+CONTEXT:
+
+- PRE-CONDITIONS:
+Let's suppose an Administrator has cerated a new translation assignment.
+In the "worst" case the translation assignment is build up with only one file to elaborate.
+According to the cirro Platform and from the profiles there are many compatible users with that assignment. 
+
+- CONDITIONS:
+It happens that 2 or more users accept the Translation Assignment.
+Later 2 users accept the TA  and the file goes in the state ---> Ready to pick
+One of the 2 users starts to translate the file(from the Current Assignment TAB) and ti changes status to "in progress"
+
+- RESULTS:
+The other user(the one didn't start the translation) continue to see the current Assignment(because at the beginning it accepeted the TA)
+but actually it cannot act on it(the first user selected the only file)
+
+#### **Conclusions**
+In order to show something more consistent to the final user we presume we would need other information from the Cirro API or modify heavily the current API elaboration but this had to be discussed taking into account the fact of keeping simple the application just as a simple "java prototype".
